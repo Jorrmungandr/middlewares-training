@@ -1,0 +1,6 @@
+PATCH http://127.0.0.1:3001/pessoas/5eff8f5f76edf24da526617d HTTP/1.1
+Content-Type: application/json
+
+{
+  "age": 1
+}

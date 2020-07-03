@@ -1,4 +1,4 @@
-module.exports =  (req, res) => {
+module.exports = async (req, res, next) => {
   const {
     message,
     data,
@@ -6,13 +6,17 @@ module.exports =  (req, res) => {
   } = res.locals;
 
   if (!message && !data) {
-    res.json({
+    res.status(404).json({
       isError: true,
-      message: 'Route not found',
+      message: 'Route not Found',
     });
-
     return;
   }
 
-  res.status(status || 200).json(res.locals);
+  const response = {
+    message,
+    data,
+  };
+
+  res.status(status || 200).json(response);
 };

@@ -1,7 +1,11 @@
-module.exports = async (req, res, next) => {
-  if (!req.locals) {
-    req.locals = {};
-  }
+module.exports = (req, res, next) => {
+  try {
+    if (!res.locals) {
+      res.locals = {};
+    }
 
-  return next();
+    return next();
+  } catch (err) {
+    return next(err);
+  }
 };

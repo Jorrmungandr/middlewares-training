@@ -1,0 +1,8 @@
+POST http://127.0.0.1:3001/pessoas HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Vini",
+  "cpf": "2",
+  "age": 25
+}

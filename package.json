@@ -1,7 +1,7 @@
 {
   "name": "middlewares-training",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/Jorrmungandr/middlewares-training.git",
   "author": "Edgar Marques <edgarmarques.110@gmail.com>",
   "license": "MIT",
